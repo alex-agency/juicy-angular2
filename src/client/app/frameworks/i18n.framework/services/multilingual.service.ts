@@ -7,7 +7,6 @@ import {Store, ActionReducer, Action} from '@ngrx/store';
 import {TranslateService} from 'ng2-translate/ng2-translate';
 
 // app
-import {Analytics, AnalyticsService} from '../../analytics.framework/index';
 import {WindowService, ILang} from '../../core.framework/index';
 
 // analytics
@@ -42,7 +41,7 @@ export const multilingualReducer: ActionReducer<MultilingualStateI> = (state: Mu
 
 // service
 @Injectable()
-export class MultilingualService extends Analytics {
+export class MultilingualService {
   
   // default supported languages
   // see main.ts bootstrap for example of how to provide different value
@@ -50,9 +49,7 @@ export class MultilingualService extends Analytics {
     { code: 'en', title: 'English' }
   ];
   
-  constructor(public analytics: AnalyticsService, private translate: TranslateService, private win: WindowService, private store: Store<any>) {
-    super(analytics);
-    this.category = CATEGORY;
+  constructor(private translate: TranslateService, private win: WindowService, private store: Store<any>) {
 
     // this language will be used as a fallback when a translation isn't found in the current language
     translate.setDefaultLang('en');
@@ -73,8 +70,6 @@ export class MultilingualService extends Analytics {
   
   public changeLang(lang: string) {
     if (_.includes(_.map(MultilingualService.SUPPORTED_LANGUAGES, 'code'), lang)) {
-      // only if lang supported
-      this.track(MULTILINGUAL_ACTIONS.LANG_CHANGE, { label: lang });
       this.store.dispatch({ type: MULTILINGUAL_ACTIONS.LANG_CHANGE, payload: { lang } });
     }
   } 

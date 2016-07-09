@@ -35,12 +35,7 @@ export class LangSwitcherComponent {
   }
   changeLang(e: any) {
     let lang = this.supportedLanguages[0].code; // fallback to default 'en'
-    
-    if (CoreConfigService.IS_MOBILE_NATIVE()) {
-      if (e) {
-        lang = this.supportedLanguages[e.newIndex].code;
-      }
-    } else if (e && e.target) {
+    if (e && e.target) {
       lang = e.target.value;
     }
     this.log.debug(`Language change: ${lang}`);

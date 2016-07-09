@@ -95,13 +95,6 @@ export class SeedConfig {
   HOT_LOADER_PORT = 5578;
 
   /**
-   * The flag for the targeting of mobile hybrid option of the application.
-   * Per default the option is false and not currently supported but may be in the future.
-   * @type {boolean}
-   */  
-  TARGET_MOBILE_HYBRID = false;
-
-  /**
    * The flag for the targeting of desktop option of the application.
    * Per default the option is false.
    * @type {boolean}

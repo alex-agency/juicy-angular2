@@ -27,9 +27,7 @@ System.config({
   defaultJSExtensions: true,
   paths: {
     'lodash': 'node_modules/lodash/index.js',
-    'ng2-translate/*': 'node_modules/ng2-translate/*.js',
-    'angulartics2': 'node_modules/angulartics2/index.js',
-    'angulartics2/*': 'node_modules/angulartics2/*.js'
+    'ng2-translate/*': 'node_modules/ng2-translate/*.js'
   },
   map: {
     'rxjs': 'node_modules/rxjs',

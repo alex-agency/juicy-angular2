@@ -143,7 +143,6 @@
     "@angular/router-deprecated": "2.0.0-rc.1",
     "@ngrx/core": "^1.0.0",
     "@ngrx/store": "^2.0.0",
-    "angulartics2": "^1.0.11",
     "es6-module-loader": "^0.17.8",
     "core-js": "^2.4.0",
     "lodash": "^4.12.0",

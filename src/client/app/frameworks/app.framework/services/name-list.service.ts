@@ -5,7 +5,6 @@ import {Observable} from 'rxjs/Observable';
 import {Store, ActionReducer, Action} from '@ngrx/store';
 
 // app
-import {Analytics, AnalyticsService} from '../../analytics.framework/index';
 import {HttpService} from '../../core.framework/index';
 
 // analytics
@@ -34,13 +33,10 @@ export const nameListReducer: ActionReducer<any> = (state: any = [], action: Act
  */
 
 @Injectable()
-export class NameListService extends Analytics {
+export class NameListService {
   public names: Observable<any>;
 
-  constructor(public analytics: AnalyticsService, private store: Store<any>, private http: HttpService) {
-    super(analytics);
-    this.category = CATEGORY;
-
+  constructor(private store: Store<any>, private http: HttpService) {
     this.names = store.select('names');
 
     this.init();
@@ -54,7 +50,6 @@ export class NameListService extends Analytics {
   }
 
   add(name: string): void {
-    this.track(NAME_LIST_ACTIONS.NAME_ADDED, { label: name });
     this.store.dispatch({ type: NAME_LIST_ACTIONS.NAME_ADDED, payload: name });
   }
 }

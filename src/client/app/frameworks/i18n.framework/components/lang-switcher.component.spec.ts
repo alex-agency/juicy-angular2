@@ -12,11 +12,7 @@ import {LangSwitcherComponent, MultilingualService, multilingualReducer} from '.
 import {TEST_MULTILINGUAL_PROVIDERS, TEST_MULTILINGUAL_RESET} from '../testing/index';
 
 const SUPPORTED_LANGUAGES: Array<ILang> = [
-  { code: 'en', title: 'English' },
-  { code: 'es', title: 'Spanish' },
-  { code: 'fr', title: 'French' },
-  { code: 'ru', title: 'Russian' },
-  { code: 'bg', title: 'Bulgarian' }
+  { code: 'en', title: 'English' }
 ];
 
 export function main() {
@@ -61,12 +57,8 @@ export function main() {
             .then(rootTC => {
               rootTC.detectChanges();
               let appDOMEl = rootTC.debugElement.children[0].nativeElement;
-              t.e(getDOM().querySelectorAll(appDOMEl, 'form > select option').length).toBe(5);
+              t.e(getDOM().querySelectorAll(appDOMEl, 'form > select option').length).toBe(1);
               t.e(getDOM().querySelectorAll(appDOMEl, 'form > select option')[0].value).toBe('en');
-              t.e(getDOM().querySelectorAll(appDOMEl, 'form > select option')[1].value).toBe('es');
-              t.e(getDOM().querySelectorAll(appDOMEl, 'form > select option')[2].value).toBe('fr');
-              t.e(getDOM().querySelectorAll(appDOMEl, 'form > select option')[3].value).toBe('ru');
-              t.e(getDOM().querySelectorAll(appDOMEl, 'form > select option')[4].value).toBe('bg');
             });
         }))); 
     });

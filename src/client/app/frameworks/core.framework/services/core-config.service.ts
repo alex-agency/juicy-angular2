@@ -3,8 +3,6 @@ import {ROUTER_DIRECTIVES} from '@angular/router-deprecated';
 
 interface IPlatforms {
   WEB: string;
-  MOBILE_NATIVE: string;
-  MOBILE_HYBRID: string;
   DESKTOP: string;
 }
 
@@ -23,8 +21,6 @@ export class CoreConfigService {
   // supported platforms
   public static PLATFORMS: IPlatforms = {
     WEB: 'web',
-    MOBILE_NATIVE: 'mobile_native',
-    MOBILE_HYBRID: 'mobile_hybrid',
     DESKTOP: 'desktop'
   };
   
@@ -34,14 +30,6 @@ export class CoreConfigService {
   // convenient platform checks
   public static IS_WEB(): boolean {
     return CoreConfigService.PLATFORM_TARGET === CoreConfigService.PLATFORMS.WEB;
-  }
-  
-  public static IS_MOBILE_NATIVE(): boolean {
-    return CoreConfigService.PLATFORM_TARGET === CoreConfigService.PLATFORMS.MOBILE_NATIVE;
-  }
-  
-  public static IS_MOBILE_HYBRID(): boolean {
-    return CoreConfigService.PLATFORM_TARGET === CoreConfigService.PLATFORMS.MOBILE_HYBRID;
   }
   
   public static IS_DESKTOP(): boolean {

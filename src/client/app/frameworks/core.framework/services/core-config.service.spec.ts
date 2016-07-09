@@ -7,7 +7,7 @@ export function main() {
     t.be(() => CoreConfigService.RESET());
     
     t.it('PLATFORMS', () => {   
-      t.e(_.keys(CoreConfigService.PLATFORMS).length).toBe(4);
+      t.e(_.keys(CoreConfigService.PLATFORMS).length).toBe(2);
       t.e(CoreConfigService.PLATFORM_TARGET).toBeDefined();
       t.e(CoreConfigService.PLATFORMS.WEB).toBe('web');
       t.e(CoreConfigService.PLATFORMS.DESKTOP).toBe('desktop');
