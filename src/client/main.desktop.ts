@@ -15,9 +15,9 @@ let menu: any;
 import {AppConfigService} from './app/frameworks/app.framework/services/app-config.service';
 
 crashReporter.start({
-  productName: 'Angular2SeedAdvanced',
-  companyName: 'NathanWalker',
-  submitURL: 'https://github.com/NathanWalker/angular2-seed-advanced',
+  productName: 'JuicyAngular2',
+  companyName: 'AlexAgency',
+  submitURL: 'https://github.com/alex-agency/juicy-angular2/issues',
   autoSubmit: true
 });
 

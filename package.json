@@ -1,9 +1,9 @@
 {
-  "name": "angular2-seed-advanced",
+  "name": "juicy-angular2",
   "version": "0.0.0",
-  "description": "Advanced seed for Angular 2 apps",
+  "description": "Angular 2 playground",
   "repository": {
-    "url": "https://github.com/NathanWalker/angular2-seed-advanced"
+    "url": "https://github.com/alex-agency/juicy-angular2"
   },
   "scripts": {
     "build.desktop.mac": "rimraf desktop/mac/* && gulp desktop.mac",
@@ -46,7 +46,8 @@
   "author": "Minko Gechev <mgechev>",
   "contributors": [
     {
-      "name": "Nathan Walker <NathanWalker>"
+      "name": "Nathan Walker <NathanWalker>",
+      "name": "Alexander Zavgorodniy"
     }
   ],
   "license": "MIT",
