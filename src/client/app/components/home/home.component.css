@@ -3,22 +3,26 @@
   padding: 0 16px;
 }
 
-input {
-  width: 250px;
+.home-card-container {
+  padding-top: 20px;
+  padding-left: 20px;
 }
 
-ul {
-  list-style-type: none;
-  padding: 0 0 0 8px;
+.home-card {
+  font-size: 14px;
+  width: 400px;
 }
 
-smile {
-  background: url("./assets/svg/smile.svg");
-  height: 48px;
-  width: 48px;
-  display: inline-block;
-  transform: scale(0.6);
-  margin-top: -25px;
-  position: relative;
-  top: 16px;
+.home-form {
+  padding: 20px;
+}
+
+.home-input {
+  font-size: 14px;
+  width: 200px;
+}
+
+.home-button {
+  font-size: 16px;
+  margin: 10px;
 }

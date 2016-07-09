@@ -47,7 +47,8 @@ export class SeedAdvancedConfig extends SeedConfig {
     this.SYSTEM_CONFIG['packageConfigPaths'] = [
       `${this.APP_BASE}node_modules/*/package.json`,
       `${this.APP_BASE}node_modules/@angular/*/package.json`,
-      `${this.APP_BASE}node_modules/@ngrx/*/package.json`
+      `${this.APP_BASE}node_modules/@ngrx/*/package.json`,
+      `${this.APP_BASE}node_modules/@angular2-material/*/package.json`
     ]; 
     this.SYSTEM_CONFIG['packages'] = systemJsPackages();
 

@@ -1,4 +1,8 @@
 <nav>
-  <a [routerLink]="['/Home']">{{'HOME' | translate}}</a>
-  <a [routerLink]="['/About']">{{'ABOUT' | translate}}</a>
+  <a [routerLink]="['/Home']">
+    <button md-button color="accent" class="home-button">{{'HOME' | translate}}</button>
+  </a>
+  <a [routerLink]="['/About']">
+    <button md-button color="accent" class="about-button">{{'ABOUT' | translate}}</button>
+  </a>
 </nav>
